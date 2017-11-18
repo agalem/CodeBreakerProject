@@ -4,7 +4,7 @@ let attempt = document.getElementById('attempt');
 function guess() {
     let input = document.getElementById('user-guess');
 
-    if (answer.value === '' || attempt.value === '') {
+    if (answer.value == '' || attempt.value == '') {
         setHiddenFields();
     }
 
@@ -82,9 +82,11 @@ function showReplay() {
 
 function validateInput(input) {
 
-    if(input.length !== 4){
-        setMessage('Guesses must be exactly 4 charakters long.');
+    if(input.length != 4){
+        setMessage('Guesses must be exactly 4 characters long.');
 
         return false;
+    } else {
+        return true;
     }
 }
